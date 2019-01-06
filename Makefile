@@ -5,7 +5,7 @@ all: stack
 stack.o: ./stack/stack.c
 	gcc -o $@ -c $<
 
-stack: main.c stack.o
+stack: ./Utils/test_stack.c stack.o
 	gcc $@.o $< -o ds_stack
 	rm $@.o
 
